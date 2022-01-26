@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-
+set -e
 
 git checkout posion
 count=$(wc -l poison.txt)
