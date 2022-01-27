@@ -1,12 +1,13 @@
 #!/usr/bin/bash
 set -e
 
-git branch
-git checkout poison
+branch=$1
+
+git checkout $branch
 count=$(wc -l < poison.txt)
 echo $count $(date) >> poison.txt
 git add -A
 
-echo "commit: creating poison commit $count"
+echo "commit: creating $branch commit $count"
 
-git commit -m "posion commit $count"
+git commit -m "$branch commit $count"
